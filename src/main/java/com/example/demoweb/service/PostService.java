@@ -14,9 +14,9 @@ import java.util.Date;
 public class PostService {
 
     List<Post> posts = new ArrayList<>() {{
-        add(new Post("1", new Date()));
-        add(new Post("2", new Date()));
-        add(new Post("3", new Date()));
+        add(new Post(0, "1", new Date()));
+        add(new Post(1, "2", new Date()));
+        add(new Post(2, "3", new Date()));
     }};
 
 
@@ -25,6 +25,6 @@ public class PostService {
     }
 
     public void createPost(String text){
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post(posts.size(), text, new Date()));
     }
 }

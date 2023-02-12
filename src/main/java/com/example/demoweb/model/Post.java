@@ -9,28 +9,35 @@ import java.util.Date;
 @Setter
 public class Post {
     private String text;
-    private int likes;
+    private Integer likes;
     private Date creationDate;
+    private long id;
     public Post(String text){
         this.text = text;
+        likes = 0;
     }
-    public Post(String text, Date date){
+    public Post(long id, String text, Date date){
+        this.id = id;
         this.text = text;
         creationDate = date;
+        likes = 0;
     }
     public String getText(){
         return text;
     }
-    public int getLikes(){
+    public Integer getLikes(){
         return likes;
     }
     public Date getDate(){
         return creationDate;
     }
+    public long getId(){
+        return id;
+    }
     public void setText(String text){
         this.text = text;
     }
-    public void setLikes(int likes){
+    public void setLikes(Integer likes){
         this.likes = likes;
     }
 
